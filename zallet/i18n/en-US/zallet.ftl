@@ -47,6 +47,14 @@ cmd-add-rpc-user-instructions = Add this to your {-zallet_toml} file:
 cmd-seed-fingerprint = Seed fingerprint: {$seedfp}
 cmd-import-mnemonic-prompt = Enter mnemonic:
 
+cmd-generate-encryption-identity-public-key = Public key: {$pubkey}
+cmd-generate-encryption-identity-written = Encryption identity written to {$path}
+cmd-generate-encryption-identity-write-failed = Failed to write encryption identity to {$path}: {$error}
+cmd-generate-encryption-identity-exists = An encryption identity already exists at {$path}; refusing to overwrite it to avoid irrecoverable key loss.
+cmd-generate-encryption-identity-passphrase-prompt = Enter passphrase to encrypt the identity:
+cmd-generate-encryption-identity-passphrase-confirm = Confirm passphrase:
+cmd-generate-encryption-identity-passphrase-mismatch = Passphrases do not match
+
 ## Startup messages
 
 warn-config-unused = Config option '{$option}' is not yet implemented in {-zallet}; ignoring its value.
@@ -113,6 +121,7 @@ migrate-wallet-legacy-seed-fp =
 
 err-kind-generic = Error
 err-kind-init = Failed to initialize {-zallet}
+err-kind-chain = An error occurred while accessing chain data.
 err-kind-sync = Failed to synchronize {-zallet}
 
 err-init-cannot-find-home-dir =
